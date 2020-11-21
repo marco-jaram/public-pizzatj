@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platzifood</title>
+    <script src="https://kit.fontawesome.com/fa227621e8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
+</head>
+
+<body class="bg-gray-200">
+    <!--Barra de navegacion-->
+    <div x-data="{ open: false }" class="bg-secundario flex justify-between items-center md:p-5 bg-gray-800">
+        <div>
+            <p class="ml-2 text-lg text-white font-bold">PIZZA<span class="text-yellow-400 ">TJ</span> </p>
+        </div>
+        <nav>
+            <ul x-show="open" @click.away="open = false" class="absolute left-0  p-10 bg-gray-800 text-white h-screen z-10 ">
+                <li class="p-2 ">Sucursales</li>
+                <li class="p-2">Atencion a cliente</li>
+                <li class="p-2">Servicios</li>
+                <li class="p-2">Contacto</li>
+            </ul>
+        </nav>
+
+        <nav class="invisible md:visible text-white ">
+            <a class="mx-2" href="">Sucursales</a>
+            <a class="mx-2" href="">Servicios</a>
+            <a class="mx-2" href="">Atencio a cliente</a>
+        </nav>
+
+        <div @click="open = true" class="mr-2 md:hidden cursor-pointer text-white text-5xl">&equiv;</div>
+    </div>
+    <!--FIN Barra de navegacion-->
+    <!--Hero-->
+    <header class="h-screen bg-no-repeat bg-cover flex justify-center" style="background-image: url(/public/img/rect916.png);">
+        <h1 class="text-3xl  md:text-6xl font-bold self-center text-yellow-400">Come rico, come pizza</h1>
+    </header>
+    <!--CARDS-->
+    <div class="min-h-screen bg-gray-200 mx-4">
+
+        <div class=" md:mt-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 m-auto container">
+            <div class="mt-4 md:bg-white rounded-lg">
+                <div>
+                    <img class="rounded-lg w-full" src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80 " alt=" ">
+                </div>
+                <div class=" md:bg-transparent p-2 rounded-lg -mt-2 relative shadow-lg md:shadow-none mx-2 bg-white ">
+                    <h2 class="font-bold ">Pizza de la casa</h2>
+                    <p class=" text-gray-700 ">¡Disfrutar esta pizza es todo un lujo. Pepperoni, carne molida, champiñones, pimiento, cebolla. Ingredientes: Pepperoni, Carne Molida, Champiñones Frescos, Pimiento y Cebolla</p>
+                    <p class="text-gray-900 font-semibold text-sm ">$180.00</p>
+                    <div class="t text-yellow-600 ">&starf; &starf;&starf; &starf; &star;</div>
+                </div>
+            </div>
+            <div class="mt-4 md:bg-white rounded-lg w-full">
+                <div>
+                    <img class="rounded-lg " src="https://images.unsplash.com/photo-1559978137-8c560d91e9e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80 " alt=" ">
+                </div>
+                <div class=" md:bg-transparent p-2 rounded-lg -mt-2 relative shadow-lg md:shadow-none mx-2 bg-white ">
+                    <h2 class="font-bold ">Pizza queso/pollo</h2>
+                    <p class=" text-gray-700 ">La pizza más tropical que tenemos. Pollo, tocino, piña, salsa mango habanero. Ingredientes: Pollo, Tocino, Piña y Salsa de Mango Habanero</p>
+                    <p class="text-gray-900 font-semibold text-sm ">$180.00</p>
+                    <div class="t text-yellow-600 ">&starf; &starf;&starf; &starf; &star;</div>
+                </div>
+            </div>
+
+            <div class="mt-4 md:bg-white rounded-lg w-full">
+                <div>
+                    <img class="rounded-lg " src="https://images.unsplash.com/photo-1564936281291-294551497d81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1249&q=80 " alt=" ">
+                </div>
+                <div class=" md:bg-transparent p-2 rounded-lg -mt-2 relative shadow-lg md:shadow-none mx-2 bg-white ">
+                    <h2 class="font-bold ">Pizza tres quesos</h2>
+                    <p class=" text-gray-700 ">La pizza pensada en los amantes del queso. Queso mozzarella, queso crema, queso cheddar, queso parmesano. Ingredientes: Queso Crema, Mozzarella, Parmesano y Cheddar</p>
+                    <p class="text-gray-900 font-semibold text-sm ">$180.00</p>
+                    <div class="t text-yellow-600 ">&starf; &starf;&starf; &starf; &star;</div>
+                </div>
+            </div>
+            <div class=" mt-4 md:bg-white rounded-lg w-full">
+                <div>
+                    <img class="rounded-lg " src="https://images.unsplash.com/photo-1576458088443-04a19bb13da6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80 " alt=" ">
+                </div>
+                <div class=" md:bg-transparent p-2 rounded-lg -mt-2 relative shadow-lg md:shadow-none mx-2 bg-white ">
+                    <h2 class="font-bold ">Pizza delux</h2>
+                    <p class=" text-gray-700 ">Disfrutar esta pizza es todo un lujo. Pepperoni, carne molida, champiñones, pimiento, cebolla. Ingredientes: Pepperoni, Carne Molida, Champiñones Frescos, Pimiento y Cebolla</p>
+                    <p class="text-gray-900 font-semibold text-sm ">$180.00</p>
+                    <div class="t text-yellow-600 ">&starf; &starf;&starf; &starf; &star;</div>
+                </div>
+            </div>
+            <div class="mt-4 md:bg-white rounded-lg w-full">
+                <div>
+                    <img class="rounded-lg " src="https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80 " alt=" ">
+                </div>
+                <div class=" md:bg-transparent p-2 rounded-lg -mt-2 relative shadow-lg md:shadow-none mx-2 bg-white ">
+                    <h2 class="font-bold ">Pizza vegetariana</h2>
+                    <p class=" text-gray-700 ">¡Sólo vegetales! Nuestra opción sin carne. Pimiento, champiñones, aceitunas, cebolla.</p>
+                    <p class="text-gray-900 font-semibold text-sm ">$180.00</p>
+                    <div class="t text-yellow-600 ">&starf; &starf;&starf; &starf; &star;</div>
+                </div>
+            </div>
+            <div class="mt-4 md:bg-white rounded-lg w-full">
+                <div>
+                    <img class="rounded-lg " src="https://images.unsplash.com/photo-1589840700256-f78d6ed1ae21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80 " alt=" ">
+                </div>
+                <div class=" md:bg-transparent p-2 rounded-lg -mt-2 relative shadow-lg md:shadow-none mx-2 bg-white mb-5">
+                    <h2 class="font-bold ">Pizza vegetariana</h2>
+                    <p class=" text-gray-700 ">¡Sólo vegetales! Nuestra opción sin carne. Pimiento, champiñones, aceitunas, cebolla. Ingredientes: Pimiento, Cebolla, Champiñones Frescos y Aceitunas</p>
+                    <p class="text-gray-900 font-semibold text-sm ">$180.00</p>
+                    <div class="t text-yellow-600 ">&starf; &starf;&starf; &starf; &star;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN  de CARDS-->
+    <!--Footer-->
+    <footer class="bg- bg-secundario text-white bg-gray-800 p-5">
+        <div class=" md:flex md:justify-around">
+
+            <div>
+                <div><i class=" p-1 fa fa-facebook mx-1"></i>Facebook</div>
+                <div><i class="p-1 fa fa-twitter mx-1"></i>Twitter</div>
+                <div><i class="p-1 fa fa-instagram mx-1"></i>Instagram</div>
+
+            </div>
+
+            <ul class=" md:lis list-disc mt-2 ml-5">
+                <li>Soporte</li>
+                <li>Acerca de</li>
+                <li>Registro</li>
+                <li>Aviso de privasidad</li>
+            </ul>
+
+        </div>
+    </footer>
+</body>
+
+</html>
